@@ -26,5 +26,12 @@ export default {
         'tron',
         'pen',
         'rol',
-        'cen' ]
+        'cen' ],
+    drugList: [{
+        name: 'Bombadil'
+    }, {
+        name: 'Whatever'
+    }, {
+        name: 'Leather'
+    }]
 };
