@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, browserHistory} from 'react-router';
+import {Link, hashHistory} from 'react-router';
 import _ from 'underscore';
 import data from './data';
 
@@ -11,7 +11,6 @@ export default React.createClass({
     },
     render: function() {
         let drug = this.props.params.id;
-        console.log(this.state.drug);
         let itemList = _.map(data.drugList, (drug, i) => {
             let url = '/main/' + drug.name;
             return <Link to={url} key={i}>{drug.name}</Link>
@@ -21,16 +20,18 @@ export default React.createClass({
                 <div className="top-menu">
                     {itemList}
                 </div>
-                <div className={drug}>
+                <div className="product-info">
+                    <h1>{this.state.drug.name}</h1>
+                    <h5>{this.state.drug.scientific}</h5>
+                    <p>{this.state.drug.description}</p>
+                    <p>{this.state.drug.sideEffects}</p>
                 </div>
             </div>
         )
     },
     componentWillMount: function() {
-        console.log(browserHistory);
         let info = _.findWhere(data.drugList, {name: this.props.params.id});
         this.setState({drug: info});
-        console.log(this.props.params.id);
     },
     componentWillReceiveProps: function(nextProps) {
         if(this.props.params.id !== nextProps.params.id) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import {browserHistory} from 'react-router';
+import {hashHistory} from 'react-router';
 import data from './data';
 import CompProduct from './product';
 import PDP from './pdp';
@@ -25,6 +25,6 @@ export default React.createClass({
         this.setState({header: randPharma});
     },
     homeFunction: function() {
-        browserHistory.push('/main/categories');
+        hashHistory.push('/main/categories');
     }
 });

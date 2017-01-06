@@ -1,16 +1,20 @@
 import React from 'react';
-import {browserHistory} from 'react-router';
+import {hashHistory} from 'react-router';
+import _ from 'underscore';
 import data from './data';
 
 export default React.createClass({
     render: function() {
+        let currentDrug = _.findWhere(data.drugList, {name: this.props.drug.name});
+        let currentImage = {background: `url(${currentDrug.imageUrl})`};
+        console.log(currentImage);
         return (
-            <div onClick={this.clickFunction}>
+            <div className="summaryButton" onClick={this.clickFunction} style={currentImage}>
                 <span>{this.props.drug.name}</span>
             </div>
         )
     },
     clickFunction: function() {
-        browserHistory.push('/main/' + this.props.drug.name);
+        hashHistory.push('/main/' + this.props.drug.name);
     }
 })

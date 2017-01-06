@@ -5,12 +5,56 @@ body {
 }
 
 header {
+    cursor: pointer;
     width: 100vw;
-    height: 200px;
-    background: green;
+    height: 280px;
+    background-image: url("./assets/images/landscape.jpg");
     h1 {
         text-align: center;
         margin: 0;
         padding-top: 60px;
+    }
+}
+
+#categories {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    background: orange;
+    .summaryButton {
+        transition: .5s;
+        cursor: pointer;
+        margin: 25px 25px 0 25px;
+        box-sizing: border-box;
+        border: 1px solid black;
+        /*background: white;*/
+        width: 200px;
+        height: 200px;
+        &:hover {
+            margin: 15px 25px 10px 25px;
+        }
+    }
+}
+
+.top-menu {
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    width: 100%;
+    a {
+        margin: 0;
+        padding: 0 10px;
+        border-right: 1px solid black;
+        display: block;
+        box-sizing: border-box;
+        text-decoration: none;
+        &:first-child {
+            border-left: 1px solid black;
+        }
     }
 }

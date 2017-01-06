@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {browserHistory} from 'react-router';
+import {hashHistory} from 'react-router';
 import router from './router';
 
-browserHistory.push('/main/categories');
+// window.location.href = "/main/categories";
+
+hashHistory.push('/main/categories');
 
 ReactDOM.render(router, document.getElementById('container'));
