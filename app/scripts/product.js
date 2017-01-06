@@ -7,7 +7,6 @@ export default React.createClass({
     render: function() {
         let currentDrug = _.findWhere(data.drugList, {name: this.props.drug.name});
         let currentImage = {background: `url(${currentDrug.imageUrl})`};
-        console.log(currentImage);
         return (
             <div className="summaryButton" onClick={this.clickFunction} style={currentImage}>
                 <span>{this.props.drug.name}</span>

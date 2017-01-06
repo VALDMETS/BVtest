@@ -14,6 +14,7 @@ export default React.createClass({
         return (
             <div id="main">
                 <header onClick={this.homeFunction}>
+                    <h5>Little Pharmaceuticals</h5>
                     <h1 ref="hero">{this.state.header}</h1>
                 </header>
                 {this.props.children}
