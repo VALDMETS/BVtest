@@ -103,11 +103,19 @@ header {
 }
 
 .pdp {
+    position: relative;
+    margin: 0 auto;
+    max-width: 900px;
     h5 {
         font-style: italic;
     }
     .description-block {
     font-family: 'Vollkorn', serif;
-}
+    }
+    #BVRRSummaryContainer {
+        position: absolute;
+        right: 20px;
+        top: 46px;
+    }
 }
 

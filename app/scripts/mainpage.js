@@ -24,6 +24,7 @@ export default React.createClass({
     componentDidMount: function() {
         var randPharma = data.prefixArr[Math.floor(Math.random()*data.prefixArr.length)] + data.middleArr[Math.floor(Math.random()*data.middleArr.length)] + data.suffixArr[Math.floor(Math.random()*data.suffixArr.length)];
         this.setState({header: randPharma});
+        hashHistory.push('/categories');
     },
     homeFunction: function() {
         hashHistory.push('/main/categories');
