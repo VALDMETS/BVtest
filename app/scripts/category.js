@@ -7,9 +7,17 @@ import PDP from './pdp';
 
 export default React.createClass({
     render: function() {
+        let idList = _.map(data.drugList, (drug, i) => {
+            return drug.id
+        });
         let itemList = _.map(data.drugList, (drug, i) => {
             return <CompProduct key={i} drug={drug}/>
         });
+        $BV.ui( 'rr', 'inline_ratings', {
+            productIds : idList,
+            containerPrefix: 'BVRRInlineRating'
+        });
+        console.log(idList);
         return (
             <div id="categories">
                 {itemList}

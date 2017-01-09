@@ -22,12 +22,12 @@ export default React.createClass({
             return <Link to={url} key={i}>{drug.name}</Link>
         })
         return (
-            <div className="pdp">
+            <div className="pdp" itemscope itemtype="http://schema.org/Product">
                 <div className="top-menu">
                     {itemList}
                 </div>
                 <div className="product-info">
-                    <h1>{this.state.drug.name}</h1>
+                    <h1 itemprop="name">{this.state.drug.name}</h1>
                     <div id="BVRRSummaryContainer"></div>
                     <h5>{this.state.drug.scientific}</h5>
                     {descriptionBlock}
