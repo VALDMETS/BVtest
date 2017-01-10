@@ -1,5 +1,4 @@
 export default {
-    thing: 'wow',
     prefixArr: [
         'Plax',
         'Ser',

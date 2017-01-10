@@ -8,7 +8,6 @@ export default React.createClass({
         let currentDrug = _.findWhere(data.drugList, {name: this.props.drug.name});
         let currentImage = {background: `url(${currentDrug.imageUrl})`};
         let inlineId = 'BVRRInlineRating-' + currentDrug.id;
-        console.log(inlineId);
         return (
             <div className="summaryButton" onClick={this.clickFunction} style={currentImage}>
                 <span className="drug-name">{this.props.drug.name}</span>
@@ -17,6 +16,6 @@ export default React.createClass({
         )
     },
     clickFunction: function() {
-        hashHistory.push('/main/' + this.props.drug.name);
+        hashHistory.push('/' + this.props.drug.name);
     }
 })

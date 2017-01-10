@@ -3,7 +3,6 @@ import {browserHistory} from 'react-router';
 import _ from 'underscore';
 import data from './data';
 import CompProduct from './product';
-import PDP from './pdp';
 
 export default React.createClass({
     render: function() {
@@ -17,7 +16,6 @@ export default React.createClass({
             productIds : idList,
             containerPrefix: 'BVRRInlineRating'
         });
-        console.log(idList);
         return (
             <div id="categories">
                 {itemList}

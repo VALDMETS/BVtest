@@ -23,12 +23,18 @@ export default React.createClass({
             </div>
         );
     },
+    componentWillMount: function() {
+
+    },
     componentDidMount: function() {
         var randPharma = data.prefixArr[Math.floor(Math.random()*data.prefixArr.length)] + data.middleArr[Math.floor(Math.random()*data.middleArr.length)] + data.suffixArr[Math.floor(Math.random()*data.suffixArr.length)];
         this.setState({header: randPharma});
-        hashHistory.push('/categories');
+        console.log(this.props.location.pathname);
+        if(this.props.location.pathname === '/') {
+            this.homeFunction();
+        }
     },
     homeFunction: function() {
-        hashHistory.push('/main/categories');
+        hashHistory.push('/categories');
     }
 });

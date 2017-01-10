@@ -55,7 +55,6 @@ header {
     justify-content: center;
     width: 100%;
     max-width: 1000px;
-    /*background: orange;*/
     .summaryButton {
         position: relative;
         transition: .5s;
@@ -63,8 +62,6 @@ header {
         margin: 25px 25px 0 25px;
         box-sizing: border-box;
         border-radius: 3px;
-        /*border: 1px solid black;*/
-        /*background: white;*/
         width: 200px;
         height: 200px;
         -webkit-filter: brightness(90%);
@@ -77,9 +74,6 @@ header {
             top: 5px;
             left: 5px;
             text-shadow: 1px 1px white
-        }
-        .drug-name {
-            text-shadow: 1px 1px white;
         }
         .pharma-inline {
             position: absolute;
@@ -138,6 +132,28 @@ header {
         position: absolute;
         right: 20px;
         top: 46px;
+    }
+    form {
+        display: block;
+        width: 200px;
+        margin: 40px auto;
+        input {
+            transition: .5s;
+            padding: 14px 36px 18px 36px;
+            font-family: 'Abel', sans-serif;
+            font-size: 22px;
+            border: none;
+            border-radius: 50px;
+            color: #F4F4F4;
+            background-color: #283345;
+            cursor: pointer;
+            &:focus {
+                outline: 0;
+            }
+            &:hover {
+                background-color: #0066B4;
+            }
+        }
     }
 }
 
